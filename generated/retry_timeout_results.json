@@ -1,0 +1,67 @@
+[
+  {
+    "idx": 443,
+    "formula": "Mn2FeBi",
+    "status": "passed",
+    "nn_min": 1.8346499364148536
+  },
+  {
+    "idx": 46,
+    "formula": "Cr2FeSi",
+    "status": "passed",
+    "nn_min": 2.2417965379531757
+  },
+  {
+    "idx": 144,
+    "formula": "Ti2ZrBi",
+    "status": "passed",
+    "nn_min": 2.1814354894641426
+  },
+  {
+    "idx": 400,
+    "formula": "Fe2CrSi",
+    "status": "passed",
+    "nn_min": 1.9552260417957128
+  },
+  {
+    "idx": 396,
+    "formula": "Fe2FeSb",
+    "status": "passed",
+    "nn_min": 2.0720712561687527
+  },
+  {
+    "idx": 65,
+    "formula": "Cu2NbSb",
+    "status": "passed",
+    "nn_min": 1.292916440477431
+  },
+  {
+    "idx": 225,
+    "formula": "Fe2MnBi",
+    "status": "passed",
+    "nn_min": 1.8306820531458505
+  },
+  {
+    "idx": 103,
+    "formula": "Ti2CrSi",
+    "status": "passed",
+    "nn_min": 2.149309005865743
+  },
+  {
+    "idx": 461,
+    "formula": "Ni2FeSi",
+    "status": "passed",
+    "nn_min": 1.8521597260447116
+  },
+  {
+    "idx": 244,
+    "formula": "Cu2NiGe",
+    "status": "passed",
+    "nn_min": 1.2917160526320424
+  },
+  {
+    "idx": 22,
+    "formula": "Fe2MnGa",
+    "status": "timeout"
+  }
+]
