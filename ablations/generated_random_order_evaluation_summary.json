@@ -1,0 +1,17 @@
+{
+  "n_generated": 500,
+  "n_valid": 500,
+  "validity_rate": 1.0,
+  "n_physically_valid": 340,
+  "physical_validity_rate": 0.68,
+  "n_unique_formulas": 377,
+  "n_novel_formulas": 3,
+  "novelty_rate": 0.007957559681697613,
+  "class_distribution": {
+    "heusler": 281,
+    "perovskite": 187,
+    "hydride": 32
+  },
+  "temperature": 0.8,
+  "top_k": 50
+}
