@@ -24,6 +24,8 @@ The `nanocif/` directory contains:
 
 ## Models
 
+The repository provides:
+
 - `model/best_model.pt` — best checkpoint for the main model (10× radial, epoch 42, val_loss 0.965)
 - `model/training_history.json` — full training history
 - `model_5x/best_model.pt` — 5× augmentation baseline
@@ -35,7 +37,6 @@ Intermediate checkpoints are omitted to keep the repository lightweight.
 
 The `generated/` directory contains:
 
-- `random_baseline_results.json` — random coordinate placement baseline results
 - `generated_nanocifs.txt` — 500 unconditionally generated structures
 - `postprocess_results.json` — baseline DFTB+ relaxation (313/500 converged)
 - `improved_results.json` — adaptive timeout recovery (+148 structures)
