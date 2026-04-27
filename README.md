@@ -4,7 +4,7 @@ Anonymous repository for the NeurIPS 2026 submission.
 
 ## Overview
 
-This repository contains the code, data, trained models, and result files needed to reproduce the main experiments in the paper:
+This repository contains the code, data, and result files needed to reproduce the main experiments in the paper:
 
 **NanoCIF: Autoregressive Generation of Alloy Nanoparticle Structures via Text-Based Representation**
 
@@ -18,18 +18,19 @@ The repository includes:
 - DFTB/PTBP post-processing and relaxation
 - figure generation scripts
 - failure-analysis scripts
-- trained model checkpoints
 - NanoCIF dataset splits
 - generated samples and evaluation summaries
+- ablation outputs for augmentation, random-order, and no-class variants
 
 ## Repository structure
 
 - `scripts/` — preprocessing, training, generation, post-processing, plotting, and analysis scripts
 - `nanocif/` — tokenizer, dataset splits, and NanoCIF files
-- `model/` — main model checkpoint and training history
-- `model_5x/` — 5x augmentation baseline checkpoint and training history
+- `model/` — training history for the main model
+- `model_5x/` — training history for the 5× augmentation baseline
 - `generated/` — main generated samples and post-processing results
-- `generated_5x/` — 5x augmentation baseline generation outputs
+- `generated_5x/` — 5× augmentation baseline generation outputs
+- `ablations/` — evaluation outputs for additional ablations such as random-order and no-class variants
 
 ## Main scripts
 
@@ -46,37 +47,38 @@ The repository includes:
 
 The `nanocif/` directory contains:
 
-- `train`, `val`, `test` — dataset splits
-- `all` — full dataset listing
-- `train_aug` — augmented training data used for the main model
-- `train_aug_5x` — augmented training data used for the 5x baseline
+- `train.txt`, `val.txt`, `test.txt` — dataset splits
+- `all.txt` — full dataset listing
+- `train_aug.txt` — augmented training data used for the main model
+- `train_aug_5x.txt` — augmented training data used for the 5× baseline
 - `tokenizer.json` — trained BPE tokenizer
 - `files/` — NanoCIF files for individual nanoparticle structures
 
 ## Models
 
-The repository provides:
+To keep the repository lightweight, large checkpoint files are omitted. The repository instead provides:
 
-- `model/best_model.pt` — best checkpoint for the main model
 - `model/training_history.json` — training history for the main model
-- `model_5x/best_model.pt` — best checkpoint for the 5x augmentation baseline
-- `model_5x/training_history.json` — training history for the 5x baseline
+- `model_5x/training_history.json` — training history for the 5× augmentation baseline
 
-Intermediate checkpoints are omitted to keep the repository lightweight.
+The training scripts and data needed to reproduce these models are included in the repository.
 
 ## Results
 
-The `generated/` and `generated_5x/` directories contain generated NanoCIF samples and summary JSON files for evaluation and post-processing.
+The repository includes generated NanoCIF samples and summary JSON files used for the main paper results, post-processing analysis, and ablations.
 
 Important files include:
 
-- `generated/generated_nanocifs`
-- `generated/improved_results.json`
+- `generated/generated_nanocifs.txt`
+- `generated/evaluation_summary.json`
 - `generated/postprocess_results.json`
-- `generated/retry_timeout_results.json`
+- `generated/improved_results.json`
 - `generated/retry_final_results.json`
-- `generated_5x/generated_nanocifs`
+- `generated/random_baseline_results.json`
+- `generated_5x/generated_nanocifs.txt`
 - `generated_5x/evaluation_summary.json`
+- `ablations/random_order/evaluation_summary.json`
+- `ablations/no_class/evaluation_summary.json`
 
 ## Reproducing the pipeline
 
